@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+header{
+    padding: 30px 0;
+}
+header > h1{
+    text-align: center;
+    color: gold;
+}
+.score-board{
+    border: 2px solid white;
+    width: 15em;
+    margin: 5px auto 10px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+    border-radius: 5px;
+    position: relative;
+    animation-name: rainbow;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+.user, .user-score, .comp, .comp-score{
+    color: gold;
+    margin: 0;
+    font-size: 20px;
+    z-index: 5;
+}
+.user{
+    position: absolute;
+    top: -13px;
+    left: 40px;
+    z-index: 5;
+}
+.comp{
+    position: absolute;
+    top: -13px;
+    right: 35px;
+    z-index: 5;
+}
+.choices{
+    width: 35em;
+    margin: 50px auto 50px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+}
+.choice{
+    background-color: white;
+    padding: 3px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: gold;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+.choice:hover{
+    background-color: gold;
+    color: white;
+}
+.result > p{
+    text-align: center;
+    font-size: 18px;
+    color: gold;
+}
+.show-choice-img{
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+}
+.show-choice-img > img{
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 3px;
+    animation-name: rainbow;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+.show-choice{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+@keyframes rainbow {
+    0%{
+        border-color: white;
+    }
+    20%{
+        border-color: #FFCC00;
+    }
+    40%{
+        border-color: #660099;
+    }
+    60%{
+        border-color: #CC0000;
+    }
+    80%{
+        border-color: #00ff00;
+    }
+    100%{
+        border-color: white;
+    }
+}
